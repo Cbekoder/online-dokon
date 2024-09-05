@@ -1,7 +1,7 @@
 from aiogram.filters import CommandStart
 from aiogram.types import Message, InlineKeyboardMarkup
 from aiogram import html
-from bot.keyboards.default.menuKeyboard import menuButtons
+from keyboards.default.menuKeyboard import menuButtons
 
 from loader import dp, db
 
