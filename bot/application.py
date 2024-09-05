@@ -3,11 +3,14 @@ import logging
 import sys
 from bot.utils.notify_admins import on_startup_notify
 from bot.utils.set_bot_commands import set_default_commands
-from loader import bot, dp
+from loader import bot, dp, db
+import handlers
+
 
 async def on_startup():
     await on_startup_notify()
     await set_default_commands()
+    db.create_user_table()
 
 
 async def main() -> None:
